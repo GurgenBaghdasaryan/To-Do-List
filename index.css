@@ -1,7 +1,7 @@
-body{
+body {
   margin: 0px;
   padding: 0px;
-  background:#FF494D;
+  background: #ff494d;
 }
 
 .header {
@@ -10,14 +10,14 @@ body{
   color: white;
   text-align: center;
 }
-  
+
 .header:after {
   content: "";
   display: table;
   clear: both;
 }
-  
-.myInput{
+
+.myInput {
   margin: 0;
   border: none;
   border-radius: 0;
@@ -29,9 +29,9 @@ body{
   width: 30%;
   outline: none;
 }
-  
+
 .add {
-  color: #5FAAFF;
+  color: #5faaff;
   float: left;
   font-size: 26px;
   cursor: pointer;
@@ -42,35 +42,35 @@ body{
   background: white;
   outline: none;
 }
-  
-.todo-list{
+
+.todo-list {
   width: 40%;
   margin-left: 28%;
-  background: #FFFFFF;
+  background: #ffffff;
   padding: 30px 40px 40px;
 }
 
 .todo li {
   display: flex;
-  border-bottom: 2px solid #B2D6FF;
+  border-bottom: 2px solid #b2d6ff;
   margin-top: 10px;
 }
 
-.delete{
+.delete {
   float: right;
   font-size: 18px;
-  background:white;
+  background: white;
   border: none;
-  color: #FF5F62;
+  color: #ff5f62;
   outline: none;
 }
 
- .deleteButton {
+.deleteButton {
   border-radius: 4px;
   padding: 2px;
   width: 12px;
   display: flex;
   justify-content: center;
-  background: #FF494C;
+  background: #ff494c;
   margin-bottom: 14px;
 }
