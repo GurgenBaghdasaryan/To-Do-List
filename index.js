@@ -6,19 +6,18 @@ let addMessage = document.querySelector(".myInput"),
 let todoList = [];
 
 addButton.addEventListener("click", () => {
+  if (addMessage.value == "") {
+    return;
+  }
+
   let newTodo = {
     todo: addMessage.value,
     checked: false,
     important: false,
   };
 
-  if (addMessage.value == "") {
-    return;
-  }
-  if (addMessage.value !== "") {
-    todoList.push(newTodo);
-    document.getElementsByClassName("myInput")[0].value = "";
-  }
+  todoList.push(newTodo);
+  document.getElementsByClassName("myInput")[0].value = "";
 
   displayMessages();
 });
@@ -28,19 +27,20 @@ function deleteFromList(index) {
   displayMessages();
 }
 
-function FromList(i) {
-  document.getElementsByClassName("asd")[i].style.textDecoration =
+function fromList(i) {
+  document.getElementsByClassName("labelFromList")[i].style.textDecoration =
     "line-through";
 }
 
 function displayMessages() {
   let displayMessage = "";
+
   todoList.forEach((item, i) => {
     displayMessage += `
         <li>
             <div id='item_${i}' class="deleteButton" onclick="deleteFromList(${i})">x</div>
-            <input type='checkbox'  id='item_${i}' onclick="FromList(${i})">
-            <label for='item_${i}' class='asd' >${item.todo}</label>
+            <input type='checkbox'  id='item_${i}' onclick="fromList(${i})">
+            <label for='item_${i}' class='labelFromList' >${item.todo}</label>
         </li>
         `;
   });
@@ -49,20 +49,6 @@ function displayMessages() {
 }
 
 deleteButton.addEventListener("click", () => {
-  let newTodo = {
-    todo: deleteButton.value,
-    checked: false,
-    important: false,
-  };
-
-  todoList.splice(newTodo);
-  displayDeleted();
+  todoList = [];
+  todo.innerHTML = todoList;
 });
-
-function displayDeleted() {
-  let displayDelete = "";
-  if (todoList.length > 0) {
-    return displayDelete;
-  }
-  todo.innerHTML = displayDelete;
-}
