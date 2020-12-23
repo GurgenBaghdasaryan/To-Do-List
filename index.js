@@ -17,7 +17,7 @@ addButton.addEventListener("click", () => {
   };
 
   todoList.push(newTodo);
-  document.getElementsByClassName("myInput")[0].value = "";
+  addMessage.value = "";
 
   displayMessages();
 });
@@ -50,5 +50,5 @@ function displayMessages() {
 
 deleteButton.addEventListener("click", () => {
   todoList = [];
-  todo.innerHTML = todoList;
+  todo.innerHTML = '';
 });
